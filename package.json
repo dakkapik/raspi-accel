@@ -1,0 +1,22 @@
+{
+  "name": "raspi-accel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dakkapik/raspi-accel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dakkapik/raspi-accel/issues"
+  },
+  "homepage": "https://github.com/dakkapik/raspi-accel#readme",
+  "dependencies": {
+    "socket.io-client": "^4.5.1"
+  }
+}
