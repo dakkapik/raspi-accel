@@ -80,5 +80,5 @@ while True:
 	f = open("giro.json", "w")
 	f.write('{"Gx":' + str(Gx) + ', "Gy":' + str(Gy) + ', "Gz":' + str(Gz) +', "Ax":' + str(Ax) +', "Ay":'+ str(Ay) +',"Az":'+ str(Az)+"}")
 	f.close()
-	sleep(0.2)
+	sleep(0.1)
 	
