@@ -9,7 +9,7 @@ socket.on("connect",() => {
 
 setInterval(()=> {
     const giro = fs.readFileSync("gyro.json")
-    socket.emit("gyro", giro)
+    socket.emit("gyro-raw-output", giro)
 }, 100)
 
 
