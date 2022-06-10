@@ -8,8 +8,8 @@ socket.on("connect",() => {
 })
 
 setInterval(()=> {
-    const giro = fs.readFileSync("giro.json")
-    socket.emit("giro", giro)
+    const giro = fs.readFileSync("gyro.json")
+    socket.emit("gyro", giro)
 }, 100)
 
 
