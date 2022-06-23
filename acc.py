@@ -21,7 +21,7 @@ GYRO_ZOUT_H  = 0x47
 
 def MPU_Init():
 	#write to sample rate register
-	bus.write_byte_data(Device_Address, SMPLRT_DIV, 7)
+	bus.write_byte_data(Device_Address, SMPLRT_DIV, 10)
 	
 	#Write to power management register
 	bus.write_byte_data(Device_Address, PWR_MGMT_1, 1)
