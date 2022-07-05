@@ -23,6 +23,7 @@ execSync('gcc -Wall -o a mpu.c main.c -lwiringPi', {
 
 
 function spawnA(){
+    console.log("SPAWING A")
     const child = spawn('./a', {} ,{
         // stdio: ['ignore', 'pipe', 'inherit'],
         cwd: childDir
