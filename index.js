@@ -13,12 +13,17 @@ socket.on("connect",() => {
     socket.emit("purpose", device)
 })
 
-socket.on("init-gyro", () => {
-    child.runBuild()
+child.runBuild()
+.then( child.startListener(socket) )
+.catch((err) => socket.emit("error", {device, err}))
 
-    .then( child.startListener(socket) )
 
-   .catch((err) => socket.emit("error", {device, err}))
-})
+// socket.on("init-gyro", () => {
+//     child.runBuild()
+
+//     .then( child.startListener(socket) )
+
+//    .catch((err) => socket.emit("error", {device, err}))
+// })
 
 
