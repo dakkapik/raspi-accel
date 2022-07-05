@@ -9,7 +9,7 @@ int main(int argc, char* argv[]) {
     mpu_set_sample_rate(&m, 0x07);
     while (1) {
         listen_accl_coordinate(&m);
-        printf("x: %f, y: %f, z: %f", m.accl.x, m.accl.y, m.accl.z);
+        printf("\rx: %f, y: %f, z: %f", m.accl.x, m.accl.y, m.accl.z);
         fflush(stdout);
         delay(100);
     }
