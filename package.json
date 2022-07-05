@@ -2,7 +2,7 @@
   "name": "raspi-accel",
   "version": "1.0.0",
   "description": "",
-  "main": "client.js",
+  "main": "index.js",
   "scripts": {
     "start":"git pull && node test",
     "test": "echo \"Error: no test specified\" && exit 1"
