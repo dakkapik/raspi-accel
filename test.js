@@ -12,8 +12,8 @@ const childDir = path.join(__dirname, 'src')
 exec('gcc -Wall -o a mpu.c main.c -lwiringPi', {
     'cwd': childDir
 }, (err, stdout, stderr) => {
-    spawnA()
     if(!err) {
+        spawnA()
         console.log('subprocess stdout: ', Buffer.from(stdout).toString())
         console.log('subprocess stderr: ', Buffer.from(stderr).toString())
     } else {
@@ -24,7 +24,7 @@ exec('gcc -Wall -o a mpu.c main.c -lwiringPi', {
 
 function spawnA(){
     console.log('\x1b[32m%s\x1b[0m', "SPAWING A")
-    const child = spawn('./a', {} ,{
+    const child = spawn('./a', [] ,{
         // stdio: ['ignore', 'pipe', 'inherit'],
         cwd: childDir
     })
