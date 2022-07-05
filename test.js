@@ -1,5 +1,5 @@
 'use strict'
-const { spawn, execSync } = require("child_process");
+const { spawn, exec } = require("child_process");
 const { Readable } = require("stream")
 const { unlink } = require('fs')
 const path = require("path")
@@ -9,7 +9,7 @@ const childDir = path.join(__dirname, 'src')
 //*TODO:
 /// process to check install of wirepi and install
 
-execSync('gcc -Wall -o a mpu.c main.c -lwiringPi', {
+exec('gcc -Wall -o a mpu.c main.c -lwiringPi', {
     'cwd': childDir
 }, (err, stdout, stderr) => {
     spawnA()
