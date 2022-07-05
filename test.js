@@ -12,10 +12,10 @@ const childDir = path.join(__dirname, 'src')
 execSync('gcc -Wall -o a mpu.c main.c -lwiringPi', {
     'cwd': childDir
 }, (err, stdout, stderr) => {
+    spawnA()
     if(!err) {
-        console.log('subprocess stdout: ', stdout.toString())
-        console.log('subprocess stderr: ', stderr.toString())
-        spawnA()
+        console.log('subprocess stdout: ', Buffer.from(stdout).toString())
+        console.log('subprocess stderr: ', Buffer.from(stderr).toString())
     } else {
         console.error("Subprocess error: ", err)
     }
