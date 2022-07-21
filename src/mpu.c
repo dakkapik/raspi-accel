@@ -55,3 +55,7 @@ void mpu_set_sample_rate(mpu* m, int value) {
     if (value < 0) return;
     write(m, SMPLRT_DIV, value);
 }
+
+int  mpu_set_sample_rate(mpu* m, int w) {
+    return 100000/(1+read_raw_data(m->fd, SMPLRT_DIV))
+}

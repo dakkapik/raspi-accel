@@ -60,8 +60,6 @@ void listen_gyro_coordinate(mpu *m);  // unit: degrees / second
 void listen_accl_coordinate(mpu *m);  // unit: g
 
 void mpu_set_sample_rate(mpu *m, int value); //set the sample rate of the clock
-int mpu_get_sample_rate(mpu *m, int SMPLRT_DIV) //returns sample rate based on value of SMPLRT_DIV
-{
-    return 100000/(1+SMPLRT_DIV)
-};
+int mpu_get_sample_rate(mpu *m); //returns sample rate based on value of SMPLRT_DIV
+
 #endif
