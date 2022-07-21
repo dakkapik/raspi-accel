@@ -46,7 +46,7 @@ void mpu_init(mpu* m, int address) {
 
     write(m, SMPLRT_DIV, 0X07);  // Set sample register default to 7
     write(m, PWR_MGMT_1, 0x01);  // Write to power managment register
-    write(m, CONFIG, 0);         // Write to configuraiton register
+    write(m, CONFIG, 1);         // Write to configuraiton register
     write(m, GYRO_CONFIG, 24);   // Write to gyro configuration register
     write(m, INT_ENABLE, 0x01);  // Write to interrupt enable register
 }
